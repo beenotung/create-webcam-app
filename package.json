@@ -23,10 +23,16 @@
   "bugs": {
     "url": "https://github.com/beenotung/create-webcam-app/issues"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "cli.js",
+  "bin": {
+    "create-webcam-app": "bin.js",
+    "create-webcam": "bin.js"
+  },
   "files": [
-    "dist"
+    "template",
+    "template/.gitignore",
+    "cli.js",
+    "bin.js"
   ],
   "scripts": {
     "test": "tsc --noEmit",
