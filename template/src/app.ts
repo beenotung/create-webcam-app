@@ -35,5 +35,22 @@ function loop() {
   canvas.width = rect.width
   canvas.height = rect.height
   context.drawImage(video, 0, 0)
+
+  /* TODO place the logics here */
+  let image = context.getImageData(0, 0, canvas.width, canvas.height)
+  for (let offset = 0; offset < image.data.length; offset += 4) {
+    let sum = 0
+    for (let i = 0; i < 3; i++) {
+      image.data[offset + i] *= 1.5
+      sum += image.data[offset + i]
+    }
+    let average = (sum /= 3)
+    for (let i = 0; i < 3; i++) {
+      let diff = image.data[offset + i] - average
+      image.data[offset + i] += diff * 0.2
+    }
+  }
+  context.putImageData(image, 0, 0)
+
   requestAnimationFrame(loop)
 }
