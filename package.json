@@ -2,7 +2,17 @@
   "name": "create-webcam-app",
   "version": "1.0.1",
   "description": "Create a simple boilerplate for typescript project using webcam.",
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "template",
+    "starter",
+    "boilerplate",
+    "webcam",
+    "canvas",
+    "userMedia",
+    "streaming",
+    "render"
+  ],
   "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
   "repository": {
