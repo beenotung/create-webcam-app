@@ -18,6 +18,8 @@ Create a simple boilerplate for typescript project using webcam.
 
 ```shell
 npm init webcam-app [project-name]
+# or
+npx -y create-webcam-app@latest [project-name]
 ```
 
 ## License
