@@ -1,21 +1,19 @@
-import { attachMain, canvas, context, video } from './ui'
+import { attachMain, canvas, context, message, video } from './ui'
 
 attachMain(main)
 
 async function main() {
-  let facingMode = 'user'
-  // let facingMode = 'environment'
-
+  message.innerText = 'requesting webcam'
   let stream = await navigator.mediaDevices.getUserMedia({
     video: {
-      facingMode,
+      facingMode: 'user',
+      // facingMode: 'environment',
     },
     audio: false,
   })
+  message.innerText = 'ready'
 
-  facingMode =
-    (stream.getVideoTracks()[0].getConstraints().facingMode as string) ||
-    facingMode
+  let facingMode = stream.getVideoTracks()[0].getConstraints().facingMode
 
   if (facingMode == 'user') {
     canvas.style.transform = 'scaleX(-1)'
