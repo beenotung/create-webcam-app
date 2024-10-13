@@ -1,29 +1,37 @@
 {
   "name": "create-webcam-app",
   "version": "0.0.0",
+  "description": "Create a simple boilerplate for typescript project using webcam.",
+  "keywords": [],
+  "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/create-webcam-app.git"
+  },
+  "homepage": "https://github.com/beenotung/create-webcam-app#readme",
+  "bugs": {
+    "url": "https://github.com/beenotung/create-webcam-app/issues"
+  },
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "tsc --noEmit",
     "clean": "rimraf dist",
     "build": "rimraf dist && tsc -p . && rimraf dist/tsconfig.tsbuildinfo",
     "tsc": "tsc -p ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "dependencies": {
+    "npm-init-helper": "^1.6.3"
+  },
   "devDependencies": {
     "@types/node": "^22.7.5",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.6.3"
-  },
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "dependencies": {
-    "npm-init-helper": "^1.6.3"
   }
 }
